@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#5B1A18">
+
+<title>Prince Rudraksha Kendra | AI Review</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#f6efe4;
+    color:#351812;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.container{
+    width:100%;
+    max-width:480px;
+    margin:auto;
+    min-height:100vh;
+    padding-bottom:30px;
+}
+
+/* HEADER */
+
+.header{
+    background:
+    linear-gradient(
+        145deg,
+        #4d1514,
+        #7b251d
+    );
+
+    color:white;
+    text-align:center;
+    padding:34px 20px 30px;
+
+    border-radius:
+    0 0 28px 28px;
+}
+
+.om{
+    font-size:42px;
+    margin-bottom:5px;
+}
+
+.logo{
+    width:76px;
+    height:76px;
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#f4d28b;
+    color:#5b1a18;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    border:3px solid #c9a227;
+}
+
+.header h1{
+    font-size:24px;
+    margin:13px 0 5px;
+}
+
+.header p{
+    margin:0;
+    opacity:.9;
+    font-size:14px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+
+    margin:
+    -15px 14px 14px;
+
+    position:relative;
+
+    border-radius:22px;
+
+    padding:22px 18px;
+
+    box-shadow:
+    0 8px 30px
+    rgba(0,0,0,.08);
+}
+
+.step{
+    display:none;
+}
+
+.step.active{
+    display:block;
+}
+
+.progress{
+    width:100%;
+    height:6px;
+
+    background:#eadfd2;
+
+    border-radius:20px;
+
+    margin-bottom:22px;
+
+    overflow:hidden;
+}
+
+.progressBar{
+    height:100%;
+    width:33%;
+
+    background:#c9a227;
+
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.title{
+    font-size:21px;
+    font-weight:800;
+
+    margin:
+    0 0 7px;
+}
+
+.subtitle{
+    font-size:13px;
+    color:#756057;
+
+    margin-bottom:18px;
+}
+
+/* OPTIONS */
+
+.options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.option{
+    border:1px solid #dbcabc;
+
+    background:#fffaf4;
+
+    color:#4a2a20;
+
+    padding:
+    11px 14px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.option:hover{
+    transform:translateY(-1px);
+}
+
+.option.selected{
+    background:#5b1a18;
+    color:white;
+    border-color:#5b1a18;
+}
+
+/* TEXTAREA */
+
+textarea{
+    width:100%;
+
+    min-height:105px;
+
+    resize:vertical;
+
+    border:
+    1px solid #dac9ba;
+
+    border-radius:15px;
+
+    padding:14px;
+
+    font-size:15px;
+
+    outline:none;
+
+    margin-top:17px;
+
+    font-family:inherit;
+}
+
+textarea:focus{
+    border-color:#c9a227;
+}
+
+/* BUTTON */
+
+.btn{
+    width:100%;
+
+    border:0;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    margin-top:16px;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#5b1a18;
+    color:white;
+}
+
+.btn-gold{
+    background:#d97706;
+    color:white;
+}
+
+.btn-light{
+    background:#f0e5d9;
+    color:#5b1a18;
+}
+
+/* LOADING */
+
+.loading{
+    text-align:center;
+    padding:20px 0;
+}
+
+.spinner{
+    width:35px;
+    height:35px;
+
+    border:
+    4px solid #eadfd2;
+
+    border-top-color:#c9a227;
+
+    border-radius:50%;
+
+    animation:
+    spin .8s linear infinite;
+
+    margin:0 auto 14px;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* REVIEW */
+
+.reviewBox{
+    background:#fff9f1;
+
+    border:
+    1px solid #ead8c4;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+    white-space:pre-wrap;
+}
+
+.notice{
+    background:#f8f1e7;
+
+    border-radius:12px;
+
+    padding:11px;
+
+    font-size:12px;
+
+    color:#705e55;
+
+    margin-top:13px;
+}
+
+/* STARS */
+
+.stars{
+    text-align:center;
+
+    font-size:30px;
+
+    letter-spacing:4px;
+
+    margin-bottom:5px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+
+    color:#806f65;
+
+    font-size:12px;
+
+    padding:12px 20px;
+}
+
+/* SUCCESS */
+
+.success{
+    text-align:center;
+}
+
+.successIcon{
+    font-size:50px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+        ॐ
+    </div>
+
+    <h1>
+        Prince Rudraksha Kendra
+    </h1>
+
+    <p>
+        Varanasi • Rudraksha • Puja Essentials
+    </p>
+
+</header>
+
+
+<!-- MAIN CARD -->
+
+<div class="card">
+
+    <div class="progress">
+        <div
+            class="progressBar"
+            id="progressBar">
+        </div>
+    </div>
+
+
+    <!-- STEP 1 -->
+
+    <section
+        class="step active"
+        id="step1">
+
+        <h2 class="title">
+            आपने क्या खरीदा?
+        </h2>
+
+        <p class="subtitle">
+            जो आपके experience से सही हो, वही चुनें।
+        </p>
+
+
+        <div
+            class="options"
+            id="products">
+
+            <button
+                class="option"
+                data-value="Rudraksha">
+                Rudraksha
+            </button>
+
+            <button
+                class="option"
+                data-value="Rudraksha Mala">
+                Rudraksha Mala
+            </button>
+
+            <button
+                class="option"
+                data-value="Puja Samagri">
+                Puja Samagri
+            </button>
+
+            <button
+                class="option"
+                data-value="Gemstone">
+                Gemstone
+            </button>
+
+            <button
+                class="option"
+                data-value="अन्य">
+                अन्य
+            </button>
+
+        </div>
+
+
+        <button
+            class="btn btn-primary"
+            onclick="nextStep(2)">
+
+            आगे बढ़ें →
+        </button>
+
+    </section>
+
+
+    <!-- STEP 2 -->
+
+    <section
+        class="step"
+        id="step2">
+
+        <h2 class="title">
+            आपका experience कैसा रहा?
+        </h2>
+
+        <p class="subtitle">
+            अपने वास्तविक अनुभव के अनुसार चुनें।
+        </p>
+
+
+        <div
+            class="options"
+            id="experience">
+
+            <button
+                class="option"
+                data-value="बहुत अच्छा">
+                😊 बहुत अच्छा
+            </button>
+
+            <button
+                class="option"
+                data-value="अच्छा">
+                🙂 अच्छा
+            </button>
+
+            <button
+                class="option"
+                data-value="संतोषजनक">
+                👍 संतोषजनक
+            </button>
+
+        </div>
+
+
+        <h3
+            style="
+            margin-top:22px;
+            margin-bottom:8px;
+            font-size:16px;
+            ">
+
+            सबसे अच्छी बात क्या लगी?
+
+        </h3>
+
+
+        <div
+            class="options"
+            id="best">
+
+            <button
+                class="option"
+                data-value="product quality">
+                Product Quality
+            </button>
+
+            <button
+                class="option"
+                data-value="staff का व्यवहार">
+                Staff का व्यवहार
+            </button>
+
+            <button
+                class="option"
+                data-value="मिली हुई जानकारी">
+                अच्छी जानकारी
+            </button>
+
+            <button
+                class="option"
+                data-value="variety">
+                Variety
+            </button>
+
+            <button
+                class="option"
+                data-value="price">
+                Price
+            </button>
+
+        </div>
+
+
+        <textarea
+            id="extra"
+            placeholder="अगर कोई खास बात बताना चाहें तो यहाँ लिखें...">
+        </textarea>
+
+
+        <button
+            class="btn btn-gold"
+            onclick="generateReview()">
+
+            ✨ मेरा Review तैयार करें
+
+        </button>
+
+    </section>
+
+
+    <!-- LOADING -->
+
+    <section
+        class="step"
+        id="loading">
+
+        <div class="loading">
+
+            <div class="spinner"></div>
+
+            <h3>
+                आपका Review तैयार हो रहा है...
+            </h3>
+
+            <p class="subtitle">
+                आपके बताए हुए experience को
+                natural language में लिखा जा रहा है।
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STEP 3 -->
+
+    <section
+        class="step"
+        id="step3">
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <h2 class="title">
+            आपका Review तैयार है 🙏
+        </h2>
+
+        <p class="subtitle">
+            पोस्ट करने से पहले इसे पढ़ें और
+            जरूरत हो तो edit करें।
+        </p>
+
+
+        <div
+            class="reviewBox"
+            id="reviewText">
+
+        </div>
+
+
+        <button
+            class="btn btn-primary"
+            onclick="copyReview()">
+
+            📋 Review Copy करें
+
+        </button>
+
+
+        <button
+            class="btn btn-gold"
+            onclick="openGoogleReview()">
+
+            ⭐ Google पर Review दें
+
+        </button>
+
+
+        <div class="notice">
+
+            कृपया केवल वही बातें पोस्ट करें जो
+            आपके वास्तविक अनुभव से संबंधित हों।
+            AI ने आपके दिए हुए answers को
+            व्यवस्थित किया है।
+
+        </div>
+
+    </section>
+
+
+    <!-- SUCCESS -->
+
+    <section
+        class="step"
+        id="success">
+
+        <div class="success">
+
+            <div class="successIcon">
+                🙏
+            </div>
+
+            <h2>
+                धन्यवाद!
+            </h2>
+
+            <p>
+                आपका feedback
+                Prince Rudraksha Kendra
+                के लिए बहुत महत्वपूर्ण है।
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<div class="footer">
+
+    Prince Rudraksha Kendra • Varanasi
+
+</div>
+
+</div>
+
+
+<script>
+
+/*
+=========================================
+GOOGLE REVIEW LINK
+=========================================
+*/
+
+const GOOGLE_REVIEW_URL =
+"https://g.page/r/CTjph2LaWRvXEBE/review";
+
+
+/*
+=========================================
+DATA
+=========================================
+*/
+
+let selectedProduct = "";
+let selectedExperience = "";
+let selectedBest = "";
+
+
+/*
+=========================================
+OPTION BUTTONS
+=========================================
+*/
+
+function setupOptions(containerId, callback){
+
+    const container =
+        document.getElementById(containerId);
+
+    const buttons =
+        container.querySelectorAll(".option");
+
+    buttons.forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                buttons.forEach(
+                    b => b.classList.remove("selected")
+                );
+
+                this.classList.add("selected");
+
+                callback(
+                    this.dataset.value
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+setupOptions(
+    "products",
+    value => selectedProduct = value
+);
+
+
+setupOptions(
+    "experience",
+    value => selectedExperience = value
+);
+
+
+setupOptions(
+    "best",
+    value => selectedBest = value
+);
+
+
+/*
+=========================================
+STEP NAVIGATION
+=========================================
+*/
+
+function showStep(id){
+
+    document
+        .querySelectorAll(".step")
+        .forEach(step => {
+
+            step.classList.remove("active");
+
+        });
+
+    document
+        .getElementById(id)
+        .classList.add("active");
+
+}
+
+
+/*
+=========================================
+NEXT STEP
+=========================================
+*/
+
+function nextStep(number){
+
+    if(!selectedProduct){
+
+        alert(
+            "कृपया आपने क्या खरीदा था, पहले चुनें।"
+        );
+
+        return;
+    }
+
+    showStep(
+        "step" + number
+    );
+
+    document
+        .getElementById("progressBar")
+        .style.width = "66%";
+
+}
+
+
+/*
+=========================================
+GENERATE REVIEW
+=========================================
+*/
+
+function generateReview(){
+
+    if(!selectedExperience){
+
+        alert(
+            "कृपया अपना experience चुनें।"
+        );
+
+        return;
+    }
+
+
+    showStep("loading");
+
+
+    document
+        .getElementById("progressBar")
+        .style.width = "100%";
+
+
+    setTimeout(
+        createReview,
+        900
+    );
+
+}
+
+
+/*
+=========================================
+REVIEW GENERATOR
+=========================================
+*/
+
+function createReview(){
+
+    const extra =
+        document
+        .getElementById("extra")
+        .value
+        .trim();
+
+
+    let review = "";
+
+
+    /*
+    INTRO
+    */
+
+    review +=
+        "Prince Rudraksha Kendra, Varanasi ";
+
+
+    /*
+    PRODUCT
+    */
+
+    review +=
+        `से ${selectedProduct} लिया। `;
+
+
+    /*
+    EXPERIENCE
+    */
+
+    review +=
+        `मेरा overall experience ${selectedExperience} रहा। `;
+
+
+    /*
+    BEST PART
+    */
+
+    if(selectedBest){
+
+        review +=
+            `मुझे खास तौर पर ${selectedBest} अच्छी लगी। `;
+
+    }
+
+
+    /*
+    EXTRA CUSTOMER INPUT
+    */
+
+    if(extra){
+
+        review +=
+            extra + " ";
+
+    }
+
+
+    /*
+    SEO — NATURAL ONLY
+    */
+
+    review +=
+        "Rudraksha और पूजा से जुड़ी चीज़ों " +
+        "के लिए यह मेरा अच्छा shopping experience रहा।";
+
+
+    /*
+    DISPLAY
+    */
+
+    document
+        .getElementById("reviewText")
+        .textContent =
+        review;
+
+
+    showStep("step3");
+
+}
+
+
+/*
+=========================================
+COPY
+=========================================
+*/
+
+async function copyReview(){
+
+    const text =
+        document
+        .getElementById("reviewText")
+        .textContent;
+
+
+    try{
+
+        await navigator
+            .clipboard
+            .writeText(text);
+
+
+        alert(
+            "✅ Review copy हो गया!"
+        );
+
+
+    }catch(error){
+
+        alert(
+            "Review को manually select करके copy करें।"
+        );
+
+    }
+
+}
+
+
+/*
+=========================================
+GOOGLE REVIEW
+=========================================
+*/
+
+function openGoogleReview(){
+
+    window.open(
+        GOOGLE_REVIEW_URL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
